@@ -83,7 +83,7 @@ function Textheader() {
           </div>
           <div>
             <h2 className="text-light text-center">
-              focus on
+              focus on{" "}
               <span
                 className="txthead "
                 data-wait="3000"
