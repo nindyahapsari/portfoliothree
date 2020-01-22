@@ -1,0 +1,39 @@
+.title-container {
+  border-bottom: 3px solid #666666;
+  border-top: 3px solid #666666;
+  margin-top: 20%;
+  padding: 5% 0;
+}
+
+.title {
+  color: #666666;
+  font-size: 52px;
+}
+
+.sub-title {
+  font-size: 32px;
+  color: #b2b2b2;
+}
+
+.smTitle-container {
+  border-bottom: 3px solid #666666;
+}
+
+.type-container div p {
+  color: #666666;
+}
+
+.typeD-container {
+  font-size: 24px;
+  color: #666666;
+}
+
+.projectD-container {
+  font-size: 34px;
+  color: #666666;
+}
+
+.clientD-container {
+  font-size: 34px;
+  color: #666666;
+}

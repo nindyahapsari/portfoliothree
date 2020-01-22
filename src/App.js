@@ -5,6 +5,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/header";
 import Navbar from "./components/navbar";
 import Aboutme from "./components/aboutme";
+import Skills from "./components/skills";
+import Projects from "./components/projects";
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <Navbar />
       <Header />
       <Aboutme />
+      <Skills />
+      <Projects />
     </div>
   );
 }

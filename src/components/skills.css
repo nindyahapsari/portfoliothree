@@ -1,0 +1,16 @@
+.stacks-container {
+  border-bottom: 3px solid #666666;
+  border-top: 3px solid #666666;
+  padding: 5% 0;
+}
+
+.stacks-container h2 {
+  font-size: 52px;
+  color: #666666;
+}
+
+.first-skills,
+.second-skills {
+  font-size: 34px;
+  color: #666666;
+}

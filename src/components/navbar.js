@@ -13,7 +13,7 @@ function Navbar() {
     <div className="" id="home-container">
       <nav className="navbar navbar-expand-lg navbar-light bg-light navbar-style">
         <a className="navbar-brand" href="/">
-          Nindya Hapsari
+          {"{"} "Nindya Hapsari" {"}"}
         </a>
         <button
           className="navbar-toggler"

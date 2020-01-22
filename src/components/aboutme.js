@@ -11,7 +11,7 @@ function aboutme() {
         </div>
         <div className="mt-5 col-lg-6">
           <div>
-            <p className=" first-text text-dark">
+            <p className=" first-text">
               {" "}
               I’m{" "}
               <span>
@@ -23,7 +23,7 @@ function aboutme() {
             </p>
           </div>
           <div>
-            <p className="second-text text-dark">
+            <p className="second-text">
               coming from technical background, i quickly jump into{" "}
               <b>web development</b> with the ambition to create a functional
               and reliable web experience. By being involve in different
