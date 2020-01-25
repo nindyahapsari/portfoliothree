@@ -4,8 +4,8 @@ import aboutmeMobile from "../images/aboutme-mobile.JPG";
 
 function aboutme() {
   return (
-    <div className="container-fluid aboutme-container">
-      <div className="row mt-5 justify-content-center align-items-center">
+    <div className="container-fluid aboutme-container mt-5">
+      <div className="row justify-content-center align-items-center">
         <div className="col-lg-4">
           <img className="img-fluid" src={aboutmeMobile} />
         </div>

@@ -1,0 +1,25 @@
+.text-inner-container {
+  /* border: 3px solid black !important; */
+  position: absolute;
+  top: 300px;
+  background-color: transparent !important;
+}
+
+.first-line-text {
+  font-size: 52px !important;
+  font-weight: 800 !important;
+}
+
+.second-line-text {
+  font-size: 52px;
+  font-weight: 800;
+}
+
+.third-line-text {
+  font-size: 52px;
+  font-weight: 800;
+}
+
+.FEtext {
+  font-size: 62px;
+}

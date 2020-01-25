@@ -1,6 +1,7 @@
 import React from "react";
 import "@fortawesome/fontawesome-free";
 import "./navbar.css";
+import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 
 // const navbarStyle = {
 //   background: "transparent",
@@ -11,10 +12,10 @@ import "./navbar.css";
 function Navbar() {
   return (
     <div className="" id="home-container">
-      <nav className="navbar navbar-expand-lg navbar-light bg-light navbar-style">
-        <a className="navbar-brand" href="/">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light navbar-style px-5">
+        <Link className="navbar-brand" href="/">
           {"{"} "Nindya Hapsari" {"}"}
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -28,6 +29,16 @@ function Navbar() {
         </button>
         <div className="collapse navbar-collapse row justify-content-end">
           <ul className="navbar-nav" id="theNav">
+            <li className="nav-item active">
+              <Link className="nav-link" to="/aboutme">
+                About me
+              </Link>
+            </li>
+            <li className="nav-item active">
+              <Link className="nav-link" to="/projects">
+                Projects
+              </Link>
+            </li>
             <li className="nav-item active">
               <a className="nav-link" href="https://github.com/nindyahapsari">
                 Github <span className="sr-only">(current)</span>

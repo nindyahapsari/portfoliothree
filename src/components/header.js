@@ -3,6 +3,7 @@ import * as THREE from "three";
 import GLTFLoader from "three-gltf-loader";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import Text from "./textheader";
+import Navbar from "./navbar";
 
 const viewStyle = {
   // position: "relative",

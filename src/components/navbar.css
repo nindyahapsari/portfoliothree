@@ -1,6 +1,20 @@
 .navbar-style {
-  position: absolute;
-  z-index: 1000;
-  background: transparent;
+  position: relative;
+  z-index: 1;
+  background-color: transparent !important;
   width: 100%;
+  margin-top: 0 !important;
+  font-size: 24px;
+}
+
+.navbar-brand {
+  /* color: #ffffff !important; */
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.nav-link {
+  /* color: #ffffff !important; */
+  font-size: 32px;
+  font-weight: 800;
 }
