@@ -29,10 +29,25 @@ function projects() {
               <p className="text-center">Client</p>
             </div>
           </div>
+
+          <Projectlist
+            type="Website"
+            project="Uxtag 2nd version of website. created with JS, HTML, SCSS, Jquery"
+            link="https:www.uxtag.de"
+            client="Uxtag studio"
+          />
+
+          <Projectlist
+            type="Website"
+            project="2st version of my personal website, created with React, css, Three Js, WebGL"
+            link="https://github.com/nindyahapsari/personal_web"
+            client="Side Project"
+          />
+
           <Projectlist
             type="Website"
             project="1st version of my personal website, created with React, Scss"
-            link=""
+            link="https://github.com/nindyahapsari/personal_web"
             client="Side Project"
           />
           <Projectlist
