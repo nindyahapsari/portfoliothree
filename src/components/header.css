@@ -1,0 +1,105 @@
+html,
+body,
+canvas {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  background-color: #222222;
+
+  /* background-color: #0cbaba;
+  background-image: linear-gradient(315deg, #0cbaba 0%, #380036 74%); */
+
+  /* background: radial-gradient(
+    at 50% 100%,
+    #8b91d8 0%,
+    #272730 40%,
+    #171720 80%,
+    #070710 100%
+  ); */
+}
+
+.header-container {
+  /* border: 2px solid lightseagreen; */
+  position: absolute;
+  /* z-index: -10000; */
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    at 50% 100%,
+    #cebf8c 0%,
+    #272730 40%,
+    #171720 80%,
+    #070710 100%
+  );
+}
+
+.view {
+  /* border: 3px solid lightcoral; */
+  position: absolute !important;
+  top: 10%;
+  z-index: 10000;
+  height: 90%;
+  width: 100%;
+}
+
+.view canvas:focus {
+  outline: none‚;
+}
+
+.text-container {
+  /* border: 2px solid lightgreen !important; */
+  position: absolute;
+  z-index: 2;
+  width: 80vw;
+  height: 40vh;
+  top: 15%;
+  left: 10%;
+}
+
+.text {
+  color: #ffffff;
+  font-size: 60px;
+  text-align: center;
+  font-weight: 500 !important;
+}
+
+.loading {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: #171717;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.FEtext {
+  font-size: 70px;
+  font-weight: 800;
+}
+
+.loading-bar-container {
+  width: 200px;
+  height: 3px;
+  background: #272727;
+}
+
+.loading-bar {
+  height: 3px;
+  background: white;
+}
+
+.layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 75%;
+  background: linear-gradient(0deg, rgba(63, 12, 88, 0.2) 0%, transparent 100%);
+  pointer-events: none;
+}

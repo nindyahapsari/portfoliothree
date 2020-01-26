@@ -1,62 +1,44 @@
-import React from "react";
-import "@fortawesome/fontawesome-free";
+import React, { useState, useRef } from "react";
 import "./navbar.css";
 import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 
-// const navbarStyle = {
-//   background: "transparent",
-//   position: "absolute",
-//   zIndex: "1000"
-// };
+function NewNavbar() {
+  const [open, setOpen] = useState(false);
 
-function Navbar() {
   return (
-    <div className="" id="home-container">
-      <nav className="navbar navbar-expand-lg navbar-light bg-light navbar-style px-5">
-        <Link className="navbar-brand" href="/">
-          {"{"} "Nindya Hapsari" {"}"}
-        </Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#theNav"
-          aria-controls="theNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse row justify-content-end">
-          <ul className="navbar-nav" id="theNav">
-            <li className="nav-item active">
-              <Link className="nav-link" to="/aboutme">
-                About me
-              </Link>
-            </li>
-            <li className="nav-item active">
-              <Link className="nav-link" to="/projects">
-                Projects
-              </Link>
-            </li>
-            <li className="nav-item active">
-              <a className="nav-link" href="https://github.com/nindyahapsari">
-                Github <span className="sr-only">(current)</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                className="nav-link"
-                href="https://www.linkedin.com/in/nindya-hapsari-a5000a153/"
-              >
-                Linkedin
-              </a>
-            </li>
-          </ul>
+    <div>
+      <nav>
+        <div className="name">
+          <Link className="link-name" to="/">
+            Nindya Hapsari
+          </Link>
         </div>
+        <div className="hamburger" onClick={() => setOpen(!open)}>
+          <div className="line"></div>
+          <div className="line"></div>
+          <div className="line"></div>
+        </div>
+        <ul className={!open ? "nav-links" : "nav-links open"}>
+          <li>
+            <Link className="link" to="/aboutme">
+              About Me
+            </Link>
+          </li>
+          <li>
+            <Link className="link" to="/projects">
+              Projects
+            </Link>
+          </li>
+          <li>
+            <a>Github</a>
+          </li>
+          <li>
+            <a>LinkedIn</a>
+          </li>
+        </ul>
       </nav>
     </div>
   );
 }
 
-export default Navbar;
+export default NewNavbar;

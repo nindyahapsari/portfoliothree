@@ -1,6 +1,6 @@
 import React from "react";
 import "./projects.css";
-import Projctlist from "./projectlist";
+import Projectlist from "./projectlist";
 
 function projects() {
   return (
@@ -29,20 +29,35 @@ function projects() {
               <p className="text-center">Client</p>
             </div>
           </div>
-          <Projctlist
-            type="Android app"
-            project="This is android project"
-            client="Side project"
-          />
-          <Projctlist
+          <Projectlist
             type="Website"
-            project="This is Website project"
-            client="IBM"
+            project="1st version of my personal website, created with React, Scss"
+            link=""
+            client="Side Project"
           />
-          <Projctlist
-            type="Web app"
-            project="This is another modern webapp project"
-            client="Bayer"
+          <Projectlist
+            type="Wordpress Custom Theme"
+            project="Wordpress custom theme build using html, css and php"
+            link="https://github.com/nindyahapsari/vet-clinic"
+            client="Side Project"
+          />
+          <Projectlist
+            type="Website"
+            project="Website that build with React JS and styled using css"
+            link="https://github.com/nindyahapsari/Resort"
+            client="Side Project"
+          />
+          <Projectlist
+            type="Android app"
+            project="Android App that can detect plants. This app intergrated with tensorflow"
+            link="https://github.com/nindyahapsari/plants-id"
+            client="Side Project"
+          />
+          <Projectlist
+            type="Android app"
+            project="Easy to use light weight android app. This app is intergrated with SQLite and Weather API"
+            link="https://github.com/nindyahapsari/WeatherApp_Sunshine"
+            client="Side Project"
           />
         </div>
       </div>

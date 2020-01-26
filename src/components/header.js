@@ -3,18 +3,20 @@ import * as THREE from "three";
 import GLTFLoader from "three-gltf-loader";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import Text from "./textheader";
-import Navbar from "./navbar";
+import Navbar from "./Navbar";
 
-const viewStyle = {
-  // position: "relative",
-  zIndex: "-9999",
-  width: "100vw",
-  height: "100vh",
-  backgroundColor: "#2a2a72",
-  backgroundImage: "linear-gradient(315deg, #2a2a72 0%, #009ffd 74%)"
+import "./header.css";
 
-  // backgroundImage: "linear-gradient(315deg, #43302e 0%, #ad6f69 74%)"
-};
+// const viewStyle = {
+//   // position: "relative",
+//   zIndex: "-9999",
+//   width: "100vw",
+//   height: "100vh",
+//   backgroundColor: "#2a2a72",
+//   backgroundImage: "linear-gradient(315deg, #2a2a72 0%, #009ffd 74%)"
+
+//   // backgroundImage: "linear-gradient(315deg, #43302e 0%, #ad6f69 74%)"
+// };
 
 // background-color: #43302e;
 
@@ -27,7 +29,7 @@ const Header = () => {
     let width = mount.current.clientWidth;
     let height = mount.current.clientHeight;
     let frameId;
-    let chamber;
+    let bee;
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(45, 2, 0.1, 1000);
@@ -41,7 +43,7 @@ const Header = () => {
     scene.add(light);
 
     // camera.position.z = 1;
-    camera.position.set(0, 10, 20);
+    camera.position.set(-10, 10, 20);
     // camera.translateY(6);
 
     renderer.setSize(width, height);
@@ -71,8 +73,8 @@ const Header = () => {
 
     //frame to fit the screen
     function frameArea(sizeToFitOnScreen, boxSize, boxCenter, camera) {
-      const halfSizeToFitOnScreen = sizeToFitOnScreen * 0.5;
-      const halfFovY = THREE.Math.degToRad(camera.fov * 0.5);
+      const halfSizeToFitOnScreen = sizeToFitOnScreen * 0.7;
+      const halfFovY = THREE.Math.degToRad(camera.fov * 0.4);
       const distance = halfSizeToFitOnScreen / Math.tan(halfFovY);
       // compute a unit vector that points in the direction the camera is now
       // in the xz plane from the center of the box
@@ -97,11 +99,11 @@ const Header = () => {
     }
 
     const loader = new GLTFLoader();
-    loader.load("landscape/landscape.gltf", function(gltf) {
+    loader.load("beerobot/bee-bot.gltf", function(gltf) {
       // called when the resource is loaded
       const root = gltf.scene;
       scene.add(root);
-      chamber = gltf.scene.children[0];
+      bee = gltf.scene.children[0];
 
       // compute the box that contains all the stuff
       // from root and below
@@ -129,7 +131,7 @@ const Header = () => {
     window.addEventListener("resize", handleResize);
 
     const animate = () => {
-      chamber.rotation.z += 0.005;
+      bee.rotation.z += 0.005;
 
       renderScene();
       controls.update();
@@ -143,9 +145,18 @@ const Header = () => {
   }, []);
 
   return (
-    <div>
-      <Text />
-      <div className="view" ref={mount} style={viewStyle}></div>
+    <div className="header-container">
+      <Navbar />
+      <div className="text-container">
+        <h3 className="text">Hello! I'm a software engineer</h3>
+        <h3 className="text">
+          {" "}
+          focus on <span className="FEtext">Frontend Development</span>
+        </h3>
+        <h3 className="text"> Based in Cologne, Germany</h3>
+      </div>
+
+      <div className="view" ref={mount}></div>
     </div>
   );
 };
